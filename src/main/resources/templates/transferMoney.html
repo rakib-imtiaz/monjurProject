@@ -14,7 +14,6 @@
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
         crossorigin="anonymous"></script>
 </body>
-
 <main>
     <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
@@ -42,7 +41,7 @@
                         <a class="nav-link" href="signup.html">Create New Account</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Logout</a>
+                        <a class="nav-link" href="/login">Logout</a>
                     </li>
 
 
@@ -58,45 +57,43 @@
 
 </main>
 
-<section style="margin-top: 100px; margin-left: 100px; ">
 
-    <div class="row">
-        <div class="col-sm-6">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">Account Details</h5>
-                    <table class="table table-striped">
-                        <tr class="table-primary">
-                            <td>Account Holder:</td>
-                            <td>1200</td>
-                        </tr>
-                        <tr class="table-primary">
-                            <td>Account Number:</td>
-                            <td></td>
-                        </tr>
-                        <tr class="table-primary">
-                            <td>Email: </td>
-                            <td></td>
-                        </tr>
-                        <tr class="table-primary">
-                            <td>Account Balance:</td>
-                            <td></td>
-                        </tr>
-                    </table>
-                    <a href="#" class="btn btn-primary">Delete Account</a>
-                </div>
-            </div>
+
+<marquee behavior="alternative" direction="" style="color: white; padding-top: 100px; font-size: 30px;">Transfer Money</marquee>
+<section style="margin-top: 100px; margin-left: 100px; ">
+    <form action="performTransaction" method="POST" style="margin-right: 40%;margin-left: 20%;color:white;margin-top: 10px;">
+        <div class="form-group">
+
+            <label>Senders Account Number</label>
+            <input class="form-control"  aria-describedby="emailHelp"
+                name="senderAccountNumber" placeholder="Enter Your Account Number">
+
         </div>
-        <div class="col-sm-6">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">Special title treatment</h5>
-                    <p class="card-text">You can transfer your Desired Amount to the Specified Recipient.</p>
-                    <a href="transferMoney.html" class="btn btn-primary">Transfer Money</a>
-                </div>
-            </div>
+        <br>
+
+        <div class="form-group">
+
+            <label>Recievers Accout Number</label>
+            <input  class="form-control" aria-describedby="emailHelp"
+               name="recieverAccountNumber" placeholder="Enter receivers number">
+
         </div>
-    </div>
+        <br>
+        <div class="form-group">
+            <label>Balance</label>
+            <input type="number" class="form-control" name="amountToSend" id="balance" placeholder="balance to transfer">
+        </div>
+        <br>
+
+        <div class="form-group">
+            <label>Password</label>
+            <input type="password" name="password" class="form-control" 
+                placeholder="Your Password">
+        </div>
+        <br>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
 </section>
 
 </html>
